@@ -1,0 +1,3 @@
+//go to phpmy admin and create a new database esgi-webapi-2a1-2022
+
+and execute the following code: on sql file

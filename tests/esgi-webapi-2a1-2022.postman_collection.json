@@ -1,0 +1,364 @@
+{
+	"info": {
+		"_postman_id": "6e4af91f-a738-426a-8d2d-23c611bcd4b0",
+		"name": "esgi-webapi-2a1-2022",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20191681"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "get all users",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "778232207e8138283d23ab524b7355e9",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost/esgi-webapi-2a1-2022/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"esgi-webapi-2a1-2022",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create a new user",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "10ee14e48ded88db0f1ccc6bc08a8319",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"Lucas\",\n    \"username\" : \"lucaslavander\",\n    \"email\" : \"llavander@esgi.fr\",\n    \"phone\" : \"0102030405\",\n    \"website\" : \"https://github.com/llavander\",\n    \"password\" : \"password\",\n    \"role\" : \"USER\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/esgi-webapi-2a1-2022/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"esgi-webapi-2a1-2022",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\" : 3,\n    \"email\" : \"audeee@test.fr\",\n    \"password\" : \"password\",\n    \"role\" : \"ADMINISTRATOR\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8888/esgi-webapi-2a1-2022/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"esgi-webapi-2a1-2022",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8888/esgi-webapi-2a1-2022/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"esgi-webapi-2a1-2022",
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "login",
+			"item": [
+				{
+					"name": "login one user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"llavander@esgi.fr\",\n    \"password\": \"password\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/esgi-webapi-2a1-2022/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"esgi-webapi-2a1-2022",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout user",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "778232207e8138283d23ab524b7355e9",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost/esgi-webapi-2a1-2022/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"esgi-webapi-2a1-2022",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "bicycle",
+			"item": [
+				{
+					"name": "get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/esgi-webapi-2a1-2022/motorcycles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"esgi-webapi-2a1-2022",
+								"motorcycles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/esgi-webapi-2a1-2022/motorcycles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"esgi-webapi-2a1-2022",
+								"motorcycles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/esgi-webapi-2a1-2022/motorcycles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"esgi-webapi-2a1-2022",
+								"motorcycles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/esgi-webapi-2a1-2022/motorcycles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"esgi-webapi-2a1-2022",
+								"motorcycles"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "parts",
+			"item": [
+				{
+					"name": "get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/esgi-webapi-2a1-2022/parts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"esgi-webapi-2a1-2022",
+								"parts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/esgi-webapi-2a1-2022/services",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"esgi-webapi-2a1-2022",
+								"services"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/esgi-webapi-2a1-2022/services",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"esgi-webapi-2a1-2022",
+								"services"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/esgi-webapi-2a1-2022/services",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"esgi-webapi-2a1-2022",
+								"services"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
